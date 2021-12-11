@@ -1,18 +1,11 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
+
 // lol
 const Home: NextPage = () => {
   return (
     <div className="bg-wings bg-fixed overflow-auto w-screen h-screen bg-center">
-      <Image
-        alt="Mountains"
-        src="/static/assets/wings2.png"
-        objectPosition="center"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
       <div className="flex flex-col items-center">
         <div className="text-red text-6xl">Select your source</div>
         <div className="flex flex-row items-center">
