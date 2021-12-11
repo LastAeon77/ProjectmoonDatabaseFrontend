@@ -11,7 +11,6 @@ module.exports = {
   images: {
     domains: ['localhost','i.imgur.com'],
   },
-  distDir: 'build',
 }
 
 
