@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+// lol
 const Home: NextPage = () => {
   return (
     <div className="bg-wings bg-fixed overflow-auto w-screen h-screen bg-center">
