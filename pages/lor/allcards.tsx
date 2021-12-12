@@ -9,7 +9,7 @@ import Collapse from "@mui/material/Collapse";
 const generate_office_list = (
   id: number,
   office: office_id,
-  cards: Array<game_card_light>,
+  cards: Array<game_card_light>|undefined,
   activeoffice: number,
   setactiveoffice: any
 ) => {
@@ -29,7 +29,7 @@ const generate_office_list = (
         <Collapse in={id === activeoffice} timeout="auto" unmountOnExit>
           <List>
             <div className="flex flex-wrap items-center justify-center">
-              {cards.map((object, i) => One_Card(object))}
+              {cards?.map((object, i) => One_Card(object))}
             </div>
           </List>
         </Collapse>
@@ -42,8 +42,8 @@ const generate_rank_list = (
   activerank: number,
   activeoffice: number,
   rank: rank_id,
-  office: Array<office_id>,
-  cards: Array<game_card_light>,
+  office: Array<office_id>|undefined,
+  cards: Array<game_card_light>|undefined,
   setactiverank: any,
   setactiveoffice: any
 ) => {
@@ -66,11 +66,11 @@ const generate_rank_list = (
         </ListItemButton>
         <Collapse in={id === activerank} timeout="auto" unmountOnExit>
           <List component="div" disablePadding>
-            {office.map((object, i) =>
+            {office?.map((object, i) =>
               generate_office_list(
                 i,
                 object,
-                cards.filter((object_card) => object_card.office === object.id),
+                cards?.filter((object_card) => object_card.office === object.id),
                 activeoffice,
                 setactiveoffice
               )
@@ -108,7 +108,7 @@ const Cards = () => {
       .then((res) => setcards(res.data as Array<game_card_light>))
       .catch((errors) => console.log(errors));
   }, []);
-  if (ranks && offices && cards) {
+  if (ranks) {
     return (
       <div className="bg-lor bg-fixed overflow-auto h-screen">
         <div className="flex flex-col items-center">
@@ -123,10 +123,10 @@ const Cards = () => {
                 activerank,
                 activeoffice,
                 object,
-                offices.filter(
+                offices?.filter(
                   (office_object) => office_object.Rank === object.id
                 ),
-                cards.filter((card_object) => card_object.rank === object.id),
+                cards?.filter((card_object) => card_object.rank === object.id),
                 setactiverank,
                 setactiveoffice
               )
