@@ -4,7 +4,7 @@ import { interview } from "../../components/types";
 import parse from "html-react-parser";
 import { Box } from "@mui/system";
 import { useRouter } from "next/router";
-function Interview() {
+const Interview = () => {
   const router = useRouter();
   const [interview, setinterview] = useState<interview>();
   useEffect(() => {
@@ -24,7 +24,7 @@ function Interview() {
               backgroundColor: "black",
             }}
           >
-            <div className="flex flex-col text-white">
+            <div className="flex flex-col text-white justify-center items-center bg-gray-400">
               <div>{interview?.name}</div>
               <div>{parse(interview?.body)}</div>
             </div>
@@ -32,7 +32,11 @@ function Interview() {
         </div>
       </div>
     );
+  } else {
+    return (
+      <div className="bg-lor bg-fixed overflow-auto bg-contain h-screen items-center"></div>
+    );
   }
-}
+};
 
 export default Interview;
