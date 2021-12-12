@@ -24,7 +24,7 @@ const Interview = () => {
               backgroundColor: "black",
             }}
           >
-            <div className="flex flex-col text-white justify-center items-center bg-gray-400">
+            <div className="flex flex-col text-white justify-center items-center bg-black">
               <div>{interview?.name}</div>
               <div >{parse(interview?.body)}</div>
             </div>
