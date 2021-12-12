@@ -28,7 +28,7 @@ function Interview() {
             <div>Date</div>
           </div>
           {interviews?.map((object, i) => (
-            <div className="flex flex-row">
+            <div className="flex flex-row" key={i}>
               <div>{object.id}</div>
               <div>{object.name}</div>
               <div>{object.last_modified}</div>
