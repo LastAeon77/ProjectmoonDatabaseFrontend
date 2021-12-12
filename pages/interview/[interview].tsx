@@ -26,7 +26,7 @@ const Interview = () => {
           >
             <div className="flex flex-col text-white justify-center items-center bg-gray-400">
               <div>{interview?.name}</div>
-              <div>{parse(interview?.body)}</div>
+              <div >{parse(interview?.body)}</div>
             </div>
           </Box>
         </div>

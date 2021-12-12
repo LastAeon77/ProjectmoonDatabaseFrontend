@@ -21,18 +21,21 @@ function Interview() {
     <div className="bg-lor bg-fixed overflow-auto bg-contain h-screen items-center">
       <div className="flex flex-row items-center justify-center w-5/6">
         <List>
-          <div className="flex flex-row">
+          <div className="flex flex-row justify-center items-center bg-gray-400 text-xl">
             <div>ID</div>
             <div>Name</div>
             <div>Last Modified</div>
             <div>Date</div>
           </div>
           {interviews?.map((object, i) => (
-            <div className="flex flex-row" key={i}>
-              <div>{object.id}</div>
-              <div>{object.name}</div>
-              <div>{object.last_modified}</div>
-              <div>{object.date}</div>
+            <div
+              className="flex flex-row justify-center items-center bg-gray-400"
+              key={i}
+            >
+              <div className="w-2/12">{object.id}</div>
+              <div className="w-4/12">{object.name}</div>
+              <div className="w-3/12">{object.last_modified}</div>
+              <div className="w-3/12">{object.date}</div>
             </div>
           ))}
         </List>
