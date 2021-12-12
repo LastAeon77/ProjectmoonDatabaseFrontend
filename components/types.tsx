@@ -84,3 +84,17 @@ export type deck = {
   description: string;
   show: boolean;
 };
+export type interview_lite = {
+  id: number;
+  name: string;
+  date: Date;
+  last_modified: string;
+};
+
+export type interview = {
+  id: number;
+  name: string;
+  body:string;
+  date: Date;
+  last_modified: string;
+};
