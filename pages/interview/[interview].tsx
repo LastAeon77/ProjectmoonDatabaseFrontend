@@ -6,11 +6,9 @@ import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 function Interview() {
   const router = useRouter();
-
   const [interview, setinterview] = useState<interview>();
   useEffect(() => {
-    const pid = router.query.interview;
-
+    const pid = router.query.interview as string;
     axios
       .get(`api/interview/${pid}`)
       .then((res) => setinterview(res.data as interview))
