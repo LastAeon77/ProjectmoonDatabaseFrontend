@@ -17,7 +17,7 @@ const Interview = () => {
   }, []);
   if (interview) {
     return (
-      <div className="bg-void bg-contain bg-fixed overflow-auto h-screen items-center">
+      <div className="bg-void bg-cover bg-fixed overflow-auto h-screen items-center">
         <div className="flex flex-row items-center justify-center w-5/6">
           <Box
             minHeight={500}
