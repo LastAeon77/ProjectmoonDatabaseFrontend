@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { interview_lite } from "../components/types";
 import { List } from "@mui/material";
+import Link from "next/link";
 
 function Interview() {
   const [interviews, setinterviews] = useState<Array<interview_lite>>();
@@ -32,15 +33,17 @@ function Interview() {
             <div className="w-3/12">Date</div>
           </div>
           {interviews?.map((object, i) => (
-            <div
-              className="flex flex-row w-full justify-center items-center bg-gray-400"
-              key={i}
-            >
-              <div className="w-2/12">{object.id}</div>
-              <div className="w-4/12">{object.name}</div>
-              <div className="w-3/12">{object.last_modified}</div>
-              <div className="w-3/12">{object.date}</div>
-            </div>
+            <Link passHref href={`abno/${object.id}`}>
+              <div
+                className="flex flex-row w-full justify-center items-center bg-gray-400"
+                key={i}
+              >
+                <div className="w-2/12">{object.id}</div>
+                <div className="w-4/12">{object.name}</div>
+                <div className="w-3/12">{object.last_modified}</div>
+                <div className="w-3/12">{object.date}</div>
+              </div>
+            </Link>
           ))}
         </List>
       </div>

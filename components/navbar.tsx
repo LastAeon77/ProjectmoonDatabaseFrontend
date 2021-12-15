@@ -100,6 +100,19 @@ const Navbar = () => {
               </button>
             </div>
           </Link>
+          <Link href="/interview" passHref>
+            <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+              <div className=" text-base font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-yellow-300">
+                Interview
+              </div>
+              <button
+                className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                type="button"
+              >
+                <i className="fas fa-bars"></i>
+              </button>
+            </div>
+          </Link>
           <div
             className={"lg:flex flex-grow items-center"}
             id="example-navbar-danger"
