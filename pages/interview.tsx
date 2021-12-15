@@ -20,32 +20,34 @@ function Interview() {
   }, []);
   return (
     <div className="bg-void bg-cover overflow-auto h-screen items-center">
-      <div className="flex flex-col items-center justify-center w-5/6">
-        <List
-          sx={{ width: "100%", maxWidth: 1800, bgcolor: "#272B30" }}
-          component="nav"
-          aria-labelledby="nested-list-subheader"
-        >
-          <div className="flex flex-row w-full justify-center items-center bg-gray-400">
-            <div className="w-2/12">ID</div>
-            <div className="w-4/12">Name</div>
-            <div className="w-3/12">Last Modified</div>
-            <div className="w-3/12">Date</div>
-          </div>
-          {interviews?.map((object, i) => (
-            <Link passHref href={`abno/${object.id}`}>
-              <div
-                className="flex flex-row w-full justify-center items-center bg-gray-400"
-                key={i}
-              >
-                <div className="w-2/12">{object.id}</div>
-                <div className="w-4/12">{object.name}</div>
-                <div className="w-3/12">{object.last_modified}</div>
-                <div className="w-3/12">{object.date}</div>
-              </div>
-            </Link>
-          ))}
-        </List>
+      <div className="flex flex-col items-center w-full">
+        <div className="flex flex-row items-center justify-center text-white w-4/5">
+          <List
+            sx={{ width: "100%", maxWidth: 1800, bgcolor: "#272B30" }}
+            component="nav"
+            aria-labelledby="nested-list-subheader"
+          >
+            <div className="flex flex-row w-full justify-center items-center bg-gray-400">
+              <div className="w-2/12">ID</div>
+              <div className="w-4/12">Name</div>
+              <div className="w-3/12">Last Modified</div>
+              <div className="w-3/12">Date</div>
+            </div>
+            {interviews?.map((object, i) => (
+              <Link passHref href={`abno/${object.id}`}>
+                <div
+                  className="flex flex-row w-full justify-center items-center bg-gray-400"
+                  key={i}
+                >
+                  <div className="w-2/12">{object.id}</div>
+                  <div className="w-4/12">{object.name}</div>
+                  <div className="w-3/12">{object.last_modified}</div>
+                  <div className="w-3/12">{object.date}</div>
+                </div>
+              </Link>
+            ))}
+          </List>
+        </div>
       </div>
     </div>
   );
