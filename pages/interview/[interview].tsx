@@ -5,10 +5,11 @@ import parse from "html-react-parser";
 import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 const Interview = () => {
-  const router = useRouter();
   const [interview, setinterview] = useState<interview>();
-  useEffect(() => {
-    const pid = router.query.interview as string;
+  const router = useRouter();
+  React.useEffect(() => {
+    const pid = router.query.interview;
+    console.log(pid)
     axios
       .get(`api/interview/${pid}`)
       .then((res) => setinterview(res.data as interview))
@@ -26,7 +27,7 @@ const Interview = () => {
           >
             <div className="flex flex-col text-white justify-center items-center bg-black">
               <div>{interview?.name}</div>
-              <div >{parse(interview?.body)}</div>
+              <div>{parse(interview?.body)}</div>
             </div>
           </Box>
         </div>

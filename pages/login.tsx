@@ -35,7 +35,6 @@ const Login = () => {
   }, []);
   return (
     <div className="bg-lor bg-fixed overflow-auto bg-contain h-screen">
-      {/* <Navbar /> */}
       <div className="flex flex-row items-center justify-center">
         <Box
           sx={{
