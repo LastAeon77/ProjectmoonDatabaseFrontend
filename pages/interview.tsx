@@ -18,7 +18,7 @@ function Interview() {
       .catch((error) => console.log(error));
   }, []);
   return (
-    <div className="bg-lor bg-fixed overflow-auto bg-contain h-screen items-center">
+    <div className="bg-void bg-contain bg-fixed overflow-auto h-screen items-center">
       <div className="flex flex-row items-center justify-center w-5/6">
         <List>
           <div className="flex flex-row justify-center items-center bg-gray-400 text-xl">

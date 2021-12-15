@@ -11,6 +11,7 @@ module.exports = {
         wings: 'url("/static/assets/wings.png")',
         lorlogo: 'url("/static/assets/logo.png")',
         limbuslogo: 'url("/static/assets/limbus.png")',
+        void: 'url("/static/assets/void.png")'
       },
       fontFamily: {
         lor: ["Nanum Gothic"],
