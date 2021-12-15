@@ -38,7 +38,7 @@ const Interview = () => {
     );
   } else {
     return (
-      <div className="bg-void bg-cover bg-fixed overflow-auto h-screen items-center">
+      <div className="bg-void bg-cover bg-fixed overflow-auto h-screen items-center" />
     );
   }
 };
