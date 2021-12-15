@@ -19,17 +19,21 @@ function Interview() {
   }, []);
   return (
     <div className="bg-void bg-cover overflow-auto h-screen items-center">
-      <div className="flex flex-row items-center justify-center w-5/6">
-        <List>
-          <div className="flex flex-row justify-center items-center bg-gray-400 text-xl">
-            <div>ID</div>
-            <div>Name</div>
-            <div>Last Modified</div>
-            <div>Date</div>
+      <div className="flex flex-col items-center justify-center w-5/6">
+        <List
+          sx={{ width: "100%", maxWidth: 1800, bgcolor: "#272B30" }}
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+        >
+          <div className="flex flex-row w-full justify-center items-center bg-gray-400">
+            <div className="w-2/12">ID</div>
+            <div className="w-4/12">Name</div>
+            <div className="w-3/12">Last Modified</div>
+            <div className="w-3/12">Date</div>
           </div>
           {interviews?.map((object, i) => (
             <div
-              className="flex flex-row justify-center items-center bg-gray-400"
+              className="flex flex-row w-full justify-center items-center bg-gray-400"
               key={i}
             >
               <div className="w-2/12">{object.id}</div>
