@@ -8,11 +8,13 @@ const Interview = () => {
   const [interview, setinterview] = useState<interview>();
   const router = useRouter();
   React.useEffect(() => {
-    const pid = router.query.interview;
-    axios
-      .get(`api/interview/${pid}`)
-      .then((res) => setinterview(res.data as interview))
-      .catch((error) => console.log(error));
+    if (router.query.interview) {
+      const pid = router.query.interview;
+      axios
+        .get(`api/interview/${pid}`)
+        .then((res) => setinterview(res.data as interview))
+        .catch((error) => console.log(error));
+    }
   }, []);
   if (interview) {
     return (
