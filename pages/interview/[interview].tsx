@@ -9,7 +9,6 @@ const Interview = () => {
   const router = useRouter();
   React.useEffect(() => {
     const pid = router.query.interview;
-    console.log(pid)
     axios
       .get(`api/interview/${pid}`)
       .then((res) => setinterview(res.data as interview))
@@ -39,7 +38,7 @@ const Interview = () => {
     );
   } else {
     return (
-      <div className="bg-lor bg-fixed overflow-auto bg-contain h-screen items-center"></div>
+      <div className="bg-void bg-cover bg-fixed overflow-auto h-screen items-center">
     );
   }
 };
