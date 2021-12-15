@@ -34,17 +34,14 @@ function Interview() {
               <div className="w-3/12">Date</div>
             </div>
             {interviews?.map((object, i) => (
-              <Link passHref href={`abno/${object.id}`}>
-                <div
-                  className="flex flex-row w-full justify-center items-center bg-gray-400"
-                  key={i}
-                >
+              <div className="flex flex-row w-full justify-center items-center bg-gray-400">
+                <Link passHref href={`abno/${object.id}`}>
                   <div className="w-2/12">{object.id}</div>
                   <div className="w-4/12">{object.name}</div>
                   <div className="w-3/12">{object.last_modified}</div>
                   <div className="w-3/12">{object.date}</div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             ))}
           </List>
         </div>
