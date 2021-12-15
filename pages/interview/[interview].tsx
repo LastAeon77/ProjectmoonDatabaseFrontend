@@ -20,13 +20,17 @@ const Interview = () => {
       <div className="bg-void bg-contain bg-fixed overflow-auto h-screen items-center">
         <div className="flex flex-row items-center justify-center w-5/6">
           <Box
+            minHeight={500}
+            maxHeight={10000}
+            minWidth={1200}
+            maxWidth={1200}
             sx={{
               height: "screen",
               backgroundColor: "black",
             }}
           >
             <div className="flex flex-col text-white justify-center items-center bg-black">
-              <div>{interview?.name}</div>
+              <div className="text-3xl">{interview?.name}</div>
               <div>{parse(interview?.body)}</div>
             </div>
           </Box>
