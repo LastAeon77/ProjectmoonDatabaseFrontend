@@ -15,7 +15,7 @@ const Interview = () => {
         .then((res) => setinterview(res.data as interview))
         .catch((error) => console.log(error));
     }
-  }, []);
+  }, [router.isReady]);
   if (interview) {
     return (
       <div className="bg-void bg-cover bg-fixed overflow-auto h-screen items-center">
