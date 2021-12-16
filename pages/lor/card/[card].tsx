@@ -88,14 +88,13 @@ function Card() {
   const router = useRouter();
   React.useEffect(() => {
     const slug = router.query.card as string;
-    console.log(slug);
     axios
       .get(`lor/api/card/${slug}`)
       .then((res) => {
         setdata(res.data as game_card);
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [router.isReady]);
   return (
     <div className="bg-lor bg-fixed overflow-auto bg-contain h-screen">
       <div className="flex flex-row items-center justify-center">

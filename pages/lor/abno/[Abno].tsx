@@ -15,14 +15,14 @@ const AbnoOne = () => {
       .get(`lor/api/abno/${id}`)
       .then((res) => setabno(res.data as abno_card))
       .catch((error) => console.log(error));
-  }, []);
+  }, [router.isReady]);
   return (
     <div className="bg-lor bg-fixed h-screen">
       <div className="flex flex-col items-center text-white">
         <Box
           key={abno?.id}
           sx={{
-            width: 5/6,
+            width: 5 / 6,
             minHeight: 650,
             maxHeight: 800,
             backgroundColor: "black",
@@ -51,7 +51,9 @@ const AbnoOne = () => {
               </div>
               <div className="flex-1 w-1/2 ml-3">
                 <div className="flex flex-col text-2xl items-center">
-                  <div className="text-4xl">Emotion Level: {abno?.emotion_level}</div>
+                  <div className="text-4xl">
+                    Emotion Level: {abno?.emotion_level}
+                  </div>
                   <div className="mt-20 mb-10">{abno?.description}</div>
                   <br></br>
                   <div

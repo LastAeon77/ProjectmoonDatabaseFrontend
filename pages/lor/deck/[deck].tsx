@@ -54,7 +54,7 @@ const One_Deck = () => {
       .get(`lor/api/deck/${pid}`)
       .then((res) => setdeck(res.data as deck))
       .catch((error) => console.log(error));
-  }, []);
+  }, [router.isReady]);
   return (
     <div className="bg-lor bg-fixed overflow-auto bg-contain h-screen">
       <div className="flex flex-col items-center w-full">
