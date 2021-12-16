@@ -21,20 +21,22 @@ const Interview = () => {
     return (
       <div className="bg-void bg-cover bg-fixed overflow-auto h-screen justify-center justify-items-center items-center">
         <div className="flex flex-col items-center justify-center justify-items-center w-5/6">
-          <Box
-            minHeight={500}
-            maxHeight={10000}
-            minWidth={1200}
-            maxWidth={1200}
-            sx={{
-              backgroundColor: "black",
-            }}
-          >
-            <div className="flex flex-col text-white justify-center items-center bg-black">
-              <div className="text-3xl">{interview?.name}</div>
-              <div>{parse(interview?.body)}</div>
-            </div>
-          </Box>
+          <div className="flex">
+            <Box
+              minHeight={500}
+              maxHeight={10000}
+              minWidth={1200}
+              maxWidth={1200}
+              sx={{
+                backgroundColor: "black",
+              }}
+            >
+              <div className="flex flex-col text-white justify-center items-center bg-black">
+                <div className="text-3xl">{interview?.name}</div>
+                <div>{parse(interview?.body)}</div>
+              </div>
+            </Box>
+          </div>
         </div>
       </div>
     );
