@@ -19,7 +19,7 @@ const Interview = () => {
   //for debuggin
   if (interview) {
     return (
-      <div className="bg-lor bg-cover bg-fixed overflow-auto bg-contain h-screen">
+      <div className="bg-void bg-cover bg-fixed overflow-auto bg-contain h-screen">
         <div className="flex flex-col items-center justify-center">
           <Box
             minHeight={500}
