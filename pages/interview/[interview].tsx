@@ -16,17 +16,17 @@ const Interview = () => {
         .catch((error) => console.log(error));
     }
   }, [router.isReady]);
+  //for debuggin
   if (interview) {
     return (
-      <div className="bg-void bg-cover bg-fixed overflow-auto h-screen items-center">
-        <div className="flex flex-col items-center justify-center w-5/6">
+      <div className="bg-void bg-cover bg-fixed overflow-auto h-screen justify-center justify-items-center items-center">
+        <div className="flex flex-col items-center justify-center justify-items-center w-5/6">
           <Box
             minHeight={500}
             maxHeight={10000}
             minWidth={1200}
             maxWidth={1200}
             sx={{
-              height: "screen",
               backgroundColor: "black",
             }}
           >
