@@ -43,6 +43,7 @@ function Interview() {
             component="nav"
             aria-labelledby="nested-list-subheader"
           >
+            <div>
               <div className="flex flex-row w-full justify-center items-center bg-gray-400">
                 <div className="w-2/12">ID</div>
                 <div className="w-4/12">Name</div>
@@ -50,6 +51,7 @@ function Interview() {
                 <div className="w-3/12">Date</div>
               </div>
               {interviews?.map((object, i) => interview_map(object, i))}
+            </div>
           </List>
         </div>
       </div>
