@@ -8,12 +8,15 @@ const interview_map = (object: interview_lite, i: number) => {
   return (
     <Link passHref href={`interview/${object.id}`} key={i}>
       <div
-        className="flex flex-row w-full justify-center items-center bg-gray-400"
+        className="border-t-4"
+        style={{ borderTopColor: "#7A8288" }}
       >
-        <div className="w-2/12">{object.id}</div>
-        <div className="w-4/12">{object.name}</div>
-        <div className="w-3/12">{object.last_modified}</div>
-        <div className="w-3/12">{object.date}</div>
+        <div className="flex flex-row w-full justify-center items-center">
+          <div className="w-2/12">{object.id}</div>
+          <div className="w-4/12">{object.name}</div>
+          <div className="w-3/12">{object.last_modified}</div>
+          <div className="w-3/12">{object.date}</div>
+        </div>
       </div>
     </Link>
   );
@@ -43,7 +46,7 @@ function Interview() {
             aria-labelledby="nested-list-subheader"
           >
             <div className="flex flex-row w-full justify-center items-center bg-gray-400">
-              <div className="w-2/12">ID</div>
+              <div className="w-2/12 ml-3">ID</div>
               <div className="w-4/12">Name</div>
               <div className="w-3/12">Last Modified</div>
               <div className="w-3/12">Date</div>
