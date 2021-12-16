@@ -6,17 +6,16 @@ import Link from "next/link";
 
 const interview_map = (object: interview_lite, i: number) => {
   return (
-    <div
-      className="flex flex-row w-full justify-center items-center bg-gray-400"
-      key={i}
-    >
-      <Link passHref href={`interview/${object.id}`}>
+    <Link passHref href={`interview/${object.id}`} key={i}>
+      <div
+        className="flex flex-row w-full justify-center items-center bg-gray-400"
+      >
         <div className="w-2/12">{object.id}</div>
         <div className="w-4/12">{object.name}</div>
         <div className="w-3/12">{object.last_modified}</div>
         <div className="w-3/12">{object.date}</div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 };
 
@@ -43,15 +42,13 @@ function Interview() {
             component="nav"
             aria-labelledby="nested-list-subheader"
           >
-            <div>
-              <div className="flex flex-row w-full justify-center items-center bg-gray-400">
-                <div className="w-2/12">ID</div>
-                <div className="w-4/12">Name</div>
-                <div className="w-3/12">Last Modified</div>
-                <div className="w-3/12">Date</div>
-              </div>
-              {interviews?.map((object, i) => interview_map(object, i))}
+            <div className="flex flex-row w-full justify-center items-center bg-gray-400">
+              <div className="w-2/12">ID</div>
+              <div className="w-4/12">Name</div>
+              <div className="w-3/12">Last Modified</div>
+              <div className="w-3/12">Date</div>
             </div>
+            {interviews?.map((object, i) => interview_map(object, i))}
           </List>
         </div>
       </div>
