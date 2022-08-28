@@ -8,7 +8,6 @@
 }
 @layer base {
   h2 {
-    @apply text-orange-500;
     @apply text-xl;
   }
 }
