@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "private": true,
-  "proxy": "https://aeonmoon2.herokuapp.com/",
+  "proxy": "https://malcute.aeonmoon.page/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

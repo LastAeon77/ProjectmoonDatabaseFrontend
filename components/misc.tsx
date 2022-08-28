@@ -12,7 +12,7 @@ export const imgur_or_static = (img_link: string | undefined) => {
   // Django database sometimes has image as just links while other as pure static. We fix it here
   if (img_link) {
     if (img_link.slice(0, 8) === "LoR_Data") {
-      return `https://aeonmoon2.herokuapp.com/static/${img_link}`.replaceAll(
+      return `https://malcute.aeonmoon.page/static/${img_link}`.replaceAll(
         " ",
         "%20"
       );

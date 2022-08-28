@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "../components/navbar";
 
-axios.defaults.baseURL = "https://aeonmoon2.herokuapp.com/";
+axios.defaults.baseURL = "https://malcute.aeonmoon.page/";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
