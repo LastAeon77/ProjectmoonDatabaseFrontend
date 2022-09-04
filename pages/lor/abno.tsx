@@ -237,7 +237,7 @@ const Abno = () => {
   React.useEffect(() => {
     // const pid = parseInt(router.query.abnormality as string, 10);
     axios
-      .get("lor/api/abno/")
+      .get("api/lor/abno/")
       .then((res) => {
         setdata({
           history: res.data?.filter(

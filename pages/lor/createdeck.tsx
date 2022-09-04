@@ -140,23 +140,23 @@ const Createdeck = () => {
   }, []);
   useEffect(() => {
     axios
-      .get("lor/api/cardid")
+      .get("api/lor/cardid")
       .then((res) => setcards(res.data as Array<card_id>))
       .catch((error) => console.log(error));
     axios
-      .get("lor/api/pageid")
+      .get("api/lor/pageid")
       .then((res) => setpages(res.data as Array<page_id>))
       .catch((error) => console.log(error));
     axios
-      .get("lor/api/officeid")
+      .get("api/lor/officeid")
       .then((res) => setFloor(res.data as Array<office_id>))
       .catch((error) => console.log(error));
     axios
-      .get("lor/api/effects")
+      .get("api/lor/effects")
       .then((res) => seteffects(res.data as Array<effect_id>))
       .catch((error) => console.log(error));
     axios
-      .get("lor/api/rank")
+      .get("api/lor/rank")
       .then((res) => setrank(res.data as Array<rank_id>))
       .catch((error) => console.log(error));
   }, []);
@@ -193,7 +193,7 @@ const Createdeck = () => {
                 const new_card = temp.join("|");
                 axios
                   .post(
-                    "/lor/api/deckcreate/",
+                    "/api/lor/deckcreate/",
                     {
                       name: values.Name,
                       description: values.Description,
@@ -216,7 +216,7 @@ const Createdeck = () => {
                       },
                     }
                   )
-                  .then((res) => setTimeout(() => {}, 400))
+                  .then((res) => setTimeout(() => { }, 400))
                   .then((res) => router.push("/lor/deck/"))
                   .catch((error) =>
                     alert("The deck name probably already exists")

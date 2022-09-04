@@ -51,7 +51,7 @@ const One_Deck = () => {
   useEffect(() => {
     const pid = router.query.deck;
     axios
-      .get(`lor/api/deck/${pid}`)
+      .get(`api/lor/deck/${pid}`)
       .then((res) => setdeck(res.data as deck))
       .catch((error) => console.log(error));
   }, [router.isReady]);

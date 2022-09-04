@@ -57,7 +57,7 @@ const Deck = () => {
   const router = useRouter();
   useEffect(() => {
     axios
-      .get("lor/api/deck")
+      .get("api/lor/deck")
       .then((res) =>
         setdecks(
           res.data.sort((a: deck, b: deck) =>

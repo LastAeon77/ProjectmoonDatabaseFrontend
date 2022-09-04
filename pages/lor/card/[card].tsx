@@ -89,7 +89,7 @@ function Card() {
   React.useEffect(() => {
     const slug = router.query.card as string;
     axios
-      .get(`lor/api/card/${slug}`)
+      .get(`api/lor/card/${slug}`)
       .then((res) => {
         setdata(res.data as game_card);
       })
@@ -107,9 +107,8 @@ function Card() {
               opacity: [0.9, 0.9, 0.9],
             }}
             style={{
-              boxShadow: `1px -20px 60px -20px ${
-                data && color_assign(data.Rarity)
-              } inset, 0px 0px 5px -1px #883C82 inset`,
+              boxShadow: `1px -20px 60px -20px ${data && color_assign(data.Rarity)
+                } inset, 0px 0px 5px -1px #883C82 inset`,
             }}
           >
             <div className="flex flex-col items-center">

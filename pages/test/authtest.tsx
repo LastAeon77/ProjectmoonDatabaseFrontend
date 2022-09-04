@@ -4,7 +4,7 @@ const Authtest = () => {
   const [data, setdata] = useState<string | null>();
   useEffect(() => {
     axios
-      .get("lor/api/cardtest", {
+      .get("api/lor/cardtest", {
         headers: {
           Authorization: `JWT ${localStorage.getItem("access_token")}`,
           "Content-Type": "application/json",
@@ -16,9 +16,9 @@ const Authtest = () => {
         console.log(res)
       })
       .catch((error) => {
-        
+
         setdata("You are not logged in, Please login")
-             });
+      });
   }, []);
   return <div>{data}</div>;
 };

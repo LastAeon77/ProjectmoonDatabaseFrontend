@@ -8,7 +8,7 @@ const demo_data: game_card = {
   Cost: 1,
   On_Play_Effect: "NULL",
   Dice_Number: 2,
-  ImgPath: "static/assets/Cards.png",
+  ImgPath: "django_static/assets/Cards.png",
   Roll1: "2-4",
   Rarity: "Hardcover",
   Eff1: "endurance1pw",

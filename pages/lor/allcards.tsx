@@ -9,7 +9,7 @@ import Collapse from "@mui/material/Collapse";
 const generate_office_list = (
   id: number,
   office: office_id,
-  cards: Array<game_card_light>|undefined,
+  cards: Array<game_card_light> | undefined,
   activeoffice: number,
   setactiveoffice: any
 ) => {
@@ -42,8 +42,8 @@ const generate_rank_list = (
   activerank: number,
   activeoffice: number,
   rank: rank_id,
-  office: Array<office_id>|undefined,
-  cards: Array<game_card_light>|undefined,
+  office: Array<office_id> | undefined,
+  cards: Array<game_card_light> | undefined,
   setactiverank: any,
   setactiveoffice: any
 ) => {
@@ -90,7 +90,7 @@ const Cards = () => {
   const [activeoffice, setactiveoffice] = useState<number>(-1);
   useEffect(() => {
     axios
-      .get("/lor/api/rank")
+      .get("/api/lor/rank")
       .then((res) =>
         setranks(
           res.data.sort((a: rank_id, b: rank_id) =>
@@ -100,11 +100,11 @@ const Cards = () => {
       )
       .catch((errors) => console.log(errors));
     axios
-      .get("/lor/api/office")
+      .get("/api/lor/office")
       .then((res) => setoffices(res.data as Array<office_id>))
       .catch((errors) => console.log(errors));
     axios
-      .get("/lor/api/cardlight")
+      .get("/api/lor/cardlight")
       .then((res) => setcards(res.data as Array<game_card_light>))
       .catch((errors) => console.log(errors));
   }, []);

@@ -12,7 +12,7 @@ const AbnoOne = () => {
   useEffect(() => {
     const id = router.query.Abno;
     axios
-      .get(`lor/api/abno/${id}`)
+      .get(`api/lor/abno/${id}`)
       .then((res) => setabno(res.data as abno_card))
       .catch((error) => console.log(error));
   }, [router.isReady]);
@@ -31,11 +31,9 @@ const AbnoOne = () => {
           style={{
             backgroundColor: "black",
             margin: "6px",
-            boxShadow: `1px -20px 60px -20px ${
-              abno && choose_color(abno.emotion_type)
-            } inset, 0px 0px 5px -1px ${
-              abno && choose_color(abno.emotion_type)
-            } inset`,
+            boxShadow: `1px -20px 60px -20px ${abno && choose_color(abno.emotion_type)
+              } inset, 0px 0px 5px -1px ${abno && choose_color(abno.emotion_type)
+              } inset`,
           }}
         >
           <div className="flex flex-col justify-center items-center">
